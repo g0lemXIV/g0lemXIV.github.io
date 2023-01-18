@@ -47,6 +47,25 @@ main > .intro {
 	font-family: 'Reem Kufi', sans-serif;
 	font-size: 3.75em;
 	font-weight: 600;
+      overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid orange; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+  animation:
+    typing 3.5s steps(40, end),
+    blink-caret .75s step-end infinite;
+}
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: orange; }
 }
 
 main > .tagline {
@@ -75,4 +94,19 @@ main > .tagline {
     width: 20px;
     display: block;
     /* Other styles here */
+}
+
+.beautiful-button {
+    background-color: #FAFAFA; /* light gray background */
+    color: #303F9F; /* dark blue text */
+    font-family: 'Reem Kufi', sans-serif; /* custom font */
+	font-size: 1.5rem;
+	margin: 1.5rem 0;
+	font-weight: 100;
+    padding: 14px 32px; /* add some padding to the button */
+    border-radius: 8px; /* add some rounded corners */
+    text-align: center; /* center the text within the button */
+    cursor: pointer; /* change the cursor to a pointer on hover */
+    margin-right: 20px;
+    margin-left: 20px;
 }
